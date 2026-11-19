@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Score</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#f5ecdc">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Score">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1 id="title">Big Science + Hot Fucking</h1>
+  <section id="tab-today" class="tab active">
+    <header>
+      <div id="date" class="muted"></div>
+      <div id="score">0</div>
+      <button id="undo" class="ghost">Undo last</button>
+    </header>
+    <div id="buttons"></div>
+  </section>
+
+  <section id="tab-graph" class="tab">
+    <div class="range">
+      <button data-range="7" class="chip">7d</button>
+      <button data-range="30" class="chip active">30d</button>
+      <button data-range="90" class="chip">90d</button>
+      <button data-range="0" class="chip">All</button>
+    </div>
+    <canvas id="chart"></canvas>
+    <div id="stats" class="muted"></div>
+    <div class="actions">
+      <button id="dl-csv">Download CSV</button>
+      <button id="dl-json">Download JSON</button>
+      <button id="share">Share</button>
+    </div>
+    <div id="msg" class="muted"></div>
+  </section>
+</main>
+
+<nav>
+  <button data-tab="today" class="active">Today</button>
+  <button data-tab="graph">Graph</button>
+</nav>
+<script src="app.js"></script>
+</body>
+</html>
